@@ -51,13 +51,13 @@ public class DataManager {
         return dataItems;
     }
 
-    public ArrayList<Task> loadData() {
+    public ArrayList<Task>  loadData() {
         ArrayList<Task> taskList = null;
         try {
             ArrayList<String> dataItems = readFile();
             taskList = parse(dataItems);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("File access issues. Please check");
         }
         return taskList;
     }
